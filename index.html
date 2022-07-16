@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" type="text/css" href="./css/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript">
+      function drop() {
+        const products = document.querySelector("#products");
+        if (products.classList.contains('hidden')) {
+          products.classList.remove('hidden');
+        } else {
+          products.classList.add('hidden');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-row w-full items-center justify-between">
+      <a href="#">
+        <img src="./assets/Logo.svg" width="128" height="128" />
+      </a>
+      <button class="md:hidden" onclick="drop()"><img src="./assets/Menu.svg"></button>
+      <div class="relative hidden md:flex flex-col md:flex-row gap-3">
+        <div class="flex flex-col items-center justify-center text-xs md:text-sm lg:text-base" id="products-label" onmouseover="drop()" onmouseleave="drop()" onclick="drop()">
+          <label>Products</label>
+          <div class="m-0 p-3 absolute hidden top-10 flex flex-col gap-5 bg-white border rounded-xl" id="products" >
+            <div class="md:hidden flex flex-row items-center justify-between">
+              <label class="uppercase">products</label>
+            <button class="w-fit"><img src="./assets/Close.svg" alt=""></button></div>
+            <div id="product" class="flex flex-row gap-3">
+              <img  class="h-fit" src="./assets/Spense_Icon.svg" alt="">
+              <div>
+                <p class="font-bold">Spense</p>
+                <p class="text-gray-600">Spence is a langing page for writers. Great for practicing absolute and flex layouts.</p>
+              </div>
+            </div>
+            <div id="product" class="flex flex-row gap-3">
+              <img class="h-fit" src="./assets/Fiber_Icon.svg" alt="">
+              <div>
+                <p class="font-bold">Fiber Landing Page</p>
+                <p class="text-gray-600">An online portfolio genereator. Great to practice flex/grid layouts, 
+                and absolute positioning.</p>
+              </div>
+            </div>
+            <div id="product" class="flex flex-row gap-3">
+              <img  class="h-fit" src="./assets/Gradie_Icon.svg" alt="">
+              <div>
+                <p class="font-bold">Gradie Sign Up Page</p>
+                <p class="text-gray-600">Gradie is a simple sign up page, grate to practice centering layouts.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base">
+          <label>Challenges</label>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base">
+          <label>Resources</label>
+        </div>
+        <div class="text-xs md:text-sm lg:text-base">
+          <label>Other Links</label>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-row items-center">
+      <a src="#" class="block px-3 text-xs md:text-sm lg:text-base">Sign in</a >
+      <a href="#" class="bg-emerald-900/[.9] py-2 px-2 text-white rounded text-xs md:text-sm lg:text-base">Try for free</a>
+    </div>
+  </div>
+  <main class="flex flex-col items-center justify-center gap-24">
+    <section>
+      <div class="mt-24 flex flex-col md:flex-row gap-24 justify-center items-center">
+        <div class="flex flex-col flex-wrap gap-2">
+          <p class="font-bold text-3xl md:text-5xl">
+            Ondeck is your remote <label class="text-yellow-500">conference tool</label>
+          </p>
+          <p class="text-md text-gray-600">
+            Ondeck is a service that allows you to create beautiful, online, and encrypted video calls for you and your remote team.
+          </p>
+          <button class="w-fit bg-emerald-900/[.9] py-2 px-2 text-white rounded">Try for free</button>
+          <div class="flex flex-row gap-3 text-md text-gray-600 mt-5">
+            5.0 Ratings based on reviews from:
+            <div class="flex flex-row gap-2">
+              <img src="./assets/CapterraLogo.svg" alt="capterra" />
+              <img src="./assets/AlternativeToLogo.svg" alt="alternative to" />
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row hidden md:inline justify-end w-1/3 w-sm:w-0">
+          <img class="object-cover" src="./assets/HeroImage.png"/>
+        </div>
+      </div>
+    </section>
+    <section class="mb-24 flex flex-col items-center justify-center gap-5">
+      <p class="text-sm md:text-md text-gray-600">Trusted by 3+ million people at companies like</p>
+      <div class="flex flex-row flex-wrap gap-10 md:gap-20 items-center justify-center">
+        <img class="w-1/3 md:w-fit" src="./assets/NetflixLogo.svg" alt="netflix">
+        <img class="w-1/3 md:w-fit" src="./assets/ShopifyLogo.svg" alt="shopify">
+        <img class="w-1/3 md:w-fit" src="./assets/SpotifyLogo.svg" alt="spotify">
+        <img class="w-1/3 md:w-fit" src="./assets/WalmartLogo.svg" alt="walmart">
+      </div>
+    </section>
+  </main>
+</body>
+</html>
